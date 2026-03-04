@@ -27,16 +27,7 @@ LLM 是整个系统的逻辑处理核心，负责信息的理解、推理与文�
 
 典型的应用交互架构如下：
 
-```mermaid
-graph TD
-    User((用户输入)) --> Router{路由与调度器}
-    Router -->|简单推理任务| LLM_Core[核心 LLM 模型]
-    Router -->|复杂外部任务| MCP_Manager[MCP 管理中心]
-    MCP_Manager -->|调用外部 API| Tools[工具与数据库]
-    Tools -->|返回数据| LLM_Core
-    LLM_Core --> Response(最终反馈给用户)
-
-```
+![应用框架](guide-to-AI-LLM-and-Agent.assets/system-workflow.jpg)
 
 在这个架构中，模型负责处理语义，而路由机制决定了模型在特定场景下是否能调用高效工具。
 
@@ -61,8 +52,3 @@ graph TD
 
 掌握这三个维度的交互，即是掌握了现代 AI 的基础工作逻辑。
 
-```
-
----
-
-这篇文章现在更加偏向技术科普风格。如果你还需要针对某个模块（比如 Agent 的任务拆解算法或 MCP 的具体实现细节）进行更深入的补充，请随时告知我。**需要我为你提供一份关于 Agent 开发的入门资源列表吗？**
