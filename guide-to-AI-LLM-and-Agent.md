@@ -1,6 +1,6 @@
 ---
 title: 对于 AI、LLM 和 Agent 的技术架构解析
-slug: fguid-to-AI-LLM-and-Agent
+slug: guide-to-AI-LLM-and-Agent
 summary: 本文从技术视角解析 AI 应用、大语言模型（LLM）以及智能体（Agent）的层次关系与协作机制。
 category: Guide, AI
 published_at: 2026-03-03
