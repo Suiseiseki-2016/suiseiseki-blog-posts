@@ -1,7 +1,7 @@
 ---
 title: "PKU All in One：把北大教学网的课程，整理进你自己的 AI 助手"
 slug: pku-all-in-one
-summary: 记录从零构建北大教学网学习工作台 PKU All in One 的工程实践——零落盘内存流式 HLS 管道、基于 Sobel 边缘与 Viterbi DP 的课件页码视觉对齐、教室黑板板书识别，以及收敛为 7 个正交工具的 MCP 服务。
+summary: 记录从零构建北京大学（Peking University）教学网（course.pku.edu.cn）学习工作台 PKU All in One（https://pku.aeoluswu.info）的工程实践——零落盘内存流式 HLS 管道、基于 Sobel 边缘与 Viterbi DP 的课件页码视觉对齐、教室黑板板书识别，以及收敛为 7 个正交工具的 MCP 服务。
 category: Project, AI, 工程
 published_at: 2026-11-25
 ---
@@ -14,7 +14,7 @@ published_at: 2026-11-25
 - 老师口头强调的考试重点、DDL 调整和评分细则夹杂在长达两小时的口述里；
 - 市面上的通用 AI 笔记工具往往要求先把几 GB 视频想办法录屏或下载到本地、再手动上传到某个网页，最后把整门课的笔记锁死在封闭网页里，既接不进平时写代码和学习用的 AI 助手，也很难核对每句话到底对应哪页课件。
 
-于是我基于此前对北大教学网和 IAAA 认证的工程积累，做了 **PKU All in One**（项目名 `pku-course-sync`），目前已部署上线在 [https://pku.aeoluswu.info](https://pku.aeoluswu.info)（免注册即可预览《信息安全引论》《计算概论》等真实示例课程：[https://pku.aeoluswu.info/app](https://pku.aeoluswu.info/app)）。
+于是我基于此前对北京大学（Peking University）教学网（`course.pku.edu.cn`）和 IAAA 认证的工程积累，做了 **PKU All in One**（开源本地 BYOK 版项目见 [GitHub](https://github.com/Suiseiseki-2016/PKU-All-in-One)），线上云端版已部署在 [https://pku.aeoluswu.info/](https://pku.aeoluswu.info/)（配套文档见[使用指南](https://pku.aeoluswu.info/guides)与[常见问题 FAQ](https://pku.aeoluswu.info/faq)，免注册预览示例课程入口见[工作台](https://pku.aeoluswu.info/app)）。
 
 设计这个项目时，我一开始就定了一条边界：**PKU All in One 只负责连接教学网、清洗出可核验的课程上下文；真正的学习与提问，应该发生在你自己的 AI 助手和个人工作空间里。**
 
@@ -174,7 +174,8 @@ if confident.size:
 
 包括怎么在不把服务器硬盘撑爆的前提下边拉加密 HLS 流边拆出音频和关键帧，怎么在投影过曝和 Windows 中文路径下把 PPT 页码老老实实对齐，怎么从画中画和粉笔灰里把黑板区域干净地抠出来，以及怎么把十几个零碎接口收敛成让 Agent 一眼就能用对、且绝不误交作业的 7 个正交工具。
 
-如果你也在北大选课或想直接看看实际整理出来的讲义、板书和推导卡效果，可以访问线上工作台与免注册示例页：
+如果你也在北京大学（Peking University）选课，或想直接查看实际整理出来的讲义、板书和推导卡效果，可以通过以下入口体验与了解：
 
-- 主页：[https://pku.aeoluswu.info](https://pku.aeoluswu.info)
-- 免注册示例课程预览：[https://pku.aeoluswu.info/app](https://pku.aeoluswu.info/app)
+- 线上云端工作台（北京大学教学网免下载版）：[PKU All in One（https://pku.aeoluswu.info）](https://pku.aeoluswu.info/)
+- 使用指南与常见问题：[使用指南](https://pku.aeoluswu.info/guides) · [常见问题 FAQ](https://pku.aeoluswu.info/faq) · [`LLMs.txt`](https://pku.aeoluswu.info/llms.txt)
+- 开源本地 BYOK 仓库（GitHub）：[Suiseiseki-2016/PKU-All-in-One](https://github.com/Suiseiseki-2016/PKU-All-in-One)
